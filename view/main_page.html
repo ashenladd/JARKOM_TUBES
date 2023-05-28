@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Paris</title>
+    <style>
+        body {
+          
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        h1 {
+            color: #3f51b5;
+        }
+
+        p {
+            color: #757575;
+            line-height: 1.5;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            background-color: #3f51b5;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .button-container button:hover {
+            background-color: #303f9f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to Beautiful Paris</h1>
+        <p>Discover the beauty of the city of love and lights, Paris. From the iconic Eiffel Tower to the charming
+            streets of Montmartre, Paris offers a unique blend of history, culture, and art.</p>
+        <p>Explore world-class museums like the Louvre and Musée d'Orsay, stroll along the Seine River, and indulge in
+            delicious French cuisine and pastries.</p>
+        <p>Plan your visit to Paris and immerse yourself in its enchanting atmosphere, exquisite architecture, and rich
+            heritage.</p>
+
+        <div class="button-container">
+            <button onclick="goBack()">Back</button>
+            <button onclick="goNext()">Next</button>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function goNext() {
+            window.location.href = "next_page.html";
+        }
+    </script>
+</body>
+
+</html>

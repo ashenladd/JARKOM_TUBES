@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Not Found</title>
+    <style>
+        body {
+            background-color: indigo;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 72px;
+            margin-bottom: 10px;
+        }
+
+        .emote {
+            font-size: 96px;
+            margin-top: 20px;
+        }
+
+        .button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>404</h1>
+        <p>Oops! The page you're looking for is not found.</p>
+        <p>Please go back or go to the homepage.</p>
+        <div class="emote">&#128557;</div>
+        <div class="button">
+            <button onclick="goBack()">Back</button>
+            <button onclick="goToHomepage()">Go to Homepage</button>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function goToHomepage() {
+            window.location.href = "/";
+        }
+    </script>
+</body>
+
+</html>

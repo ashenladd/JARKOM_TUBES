@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sample Page</title>
+    <style>
+        body {
+            background-color: indigo;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 72px;
+            margin-bottom: 10px;
+        }
+
+        .emote {
+            font-size: 96px;
+            margin-top: 20px;
+        }
+
+        .word-display {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 200px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #fff;
+            border: none;
+            color: indigo;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function goToHomepage() {
+            window.location.href = "/";
+        }
+
+        function goToURL() {
+            var url = document.getElementById("urlInput").value;
+            if (!url.includes(".html")) {
+                url += ".html";
+            }
+            window.location.href = url;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sample Page</h1>
+
+        <button onclick="goToHomepage()">Go to Homepage</button>
+
+        <br><br>
+
+        <input type="text" id="urlInput" placeholder="Enter URL">
+        <button onclick="goToURL()">Go</button>
+
+        <div class="word-display">
+            <p>The entered URL will be displayed here:</p>
+            <p><strong id="displayedURL"></strong></p>
+        </div>
+    </div>
+
+    <script>
+        var urlInput = document.getElementById("urlInput");
+        var displayedURL = document.getElementById("displayedURL");
+
+        urlInput.addEventListener("input", function () {
+            displayedURL.innerText = urlInput.value;
+        });
+    </script>
+</body>
+
+</html>
